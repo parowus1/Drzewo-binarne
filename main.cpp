@@ -21,6 +21,20 @@ int main() {
         std::cout << "Wpisz swój wybór: ";
         std::cin >> input;
 
-    
+        int value;
+
+        if (input == "1") {
+            std::cout << "Wprowadź element do dodania: ";
+            std::cin >> value;
+            tree.Insert(value);
+            } else if (input == "2") {
+            std::cout << "Wprowadź element do usunięcia: ";
+            std::cin >> value;
+            tree.Remove(value);
+        } else if (input == "3") {
+            tree.Clear();
+            std::cout << "Drzewo usunięte.\n";
+        }
+        
 return 0;
 }
