@@ -34,7 +34,7 @@ int main() {
         } else if (input == "3") {
             tree.Clear();
             std::cout << "Drzewo usunięte.\n";
-        }
+        }//////
         
 return 0;
 }
