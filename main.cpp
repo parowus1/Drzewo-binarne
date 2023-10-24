@@ -22,7 +22,7 @@ int main() {
         std::cout << "Wpisz swoj wybor: ";
         std::cin >> input;
 
-        int value;
+        std::string value;
 
         if (input == "1") {
             std::cout << "Wprowadz element do dodania: ";
@@ -30,7 +30,7 @@ int main() {
             if(value[0] <= '9' && value[0] >='0'){
                 //dodawanie elementow
             } else {
-                std::cout<< "\n!!! That is not a number !!!\n\n";
+                std::cout<< "\n!!! To nie jest liczba !!!\n\n";
             }
             
             } else if (input == "2") {
@@ -39,13 +39,15 @@ int main() {
             if(value[0] <= '9' && value[0] >='0'){
                 //usuwanie elementow
             } else {
-                std::cout<< "\n!!! That is not a number !!!\n\n";
+                std::cout<< "\n!!! To nie jest liczba !!!\n\n";
             }
         } else if (input == "3") {
            // czyszczenie drzewa
             std::cout << "Drzewo usuniete.\n";
-        } else {
+        } else if (input == "0"){
             break;
+        }else {
+            std::cout << "\n!!! Wprowadzono niewlasciwe dane !!!\n\n";
         }
         
     }
