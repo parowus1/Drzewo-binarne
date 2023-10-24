@@ -27,13 +27,22 @@ int main() {
         if (input == "1") {
             std::cout << "Wprowadz element do dodania: ";
             std::cin >> value;
-            //tree.Insert(value);
+            if(value[0] <= '9' && value[0] >='0'){
+                //dodawanie elementow
+            } else {
+                std::cout<< "\n!!! That is not a number !!!\n\n";
+            }
+            
             } else if (input == "2") {
             std::cout << "Wprowadz element do usuniecia: ";
             std::cin >> value;
-            //tree.Remove(value);
+            if(value[0] <= '9' && value[0] >='0'){
+                //usuwanie elementow
+            } else {
+                std::cout<< "\n!!! That is not a number !!!\n\n";
+            }
         } else if (input == "3") {
-           // tree.Clear();
+           // czyszczenie drzewa
             std::cout << "Drzewo usuniete.\n";
         } else {
             break;
