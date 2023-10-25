@@ -66,7 +66,7 @@ int main() {
         }else {
             std::cout << "\n!!! Wprowadzono niewlasciwe dane !!!\n\n";
         }
-        
+        ///////
     }
 return 0;
 }
