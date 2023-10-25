@@ -40,7 +40,7 @@ bool BinarySearchTree::Search(int value) const {
 }
 
 
-//wyświetlenie
+//wyświetlenie drzewa
 void BinarySearchTree::Display() const {
     InOrderDisplay(root);
     std::cout << std::endl;
@@ -48,20 +48,20 @@ void BinarySearchTree::Display() const {
 
 
 
-//binarne zapisywanie
+//rekurencyjne wstawianie nowego elementu do drzewa
         void BinarySearchTree::InsertRecursive(Node*& node, int value) {
-    if (node == nullptr) {
+    if (node == nullptr) { //sprawdza czy drzewo jest puste lub czy jesteśmy na końcu drzewa
         node = new Node(value);
-    } else if (value < node->data) {
-        InsertRecursive(node->left, value);
+    } else if (value < node->data) { //jeśli wartość którą dodajemy jest mniejsza od tej znajdującej się w drzewie, to zostaje dodana do lewego poddrzewa i na odwrót
+        InsertRecursive(node->left, value); 
     } else {
-        InsertRecursive(node->right, value);
+        InsertRecursive(node->right, value); 
     }
 }
-// binarne usuwanie
+// rekurencyjne usuwanie elementu z drzewa
 bool BinarySearchTree::RemoveRecursive(Node*& node, int value) {
     if (node == nullptr) {
-        return false;
+        return false; //jeśli drzewo jest puste to kończy działanie
     }
     if (value < node->data) {
         return RemoveRecursive(node->left, value);
@@ -90,22 +90,22 @@ bool BinarySearchTree::RemoveRecursive(Node*& node, int value) {
         return true;
     }
 }
-//binarne czyszczenie
+//rekurencyjne usuwanie wszystkich węzłów w drzewie
 void BinarySearchTree::ClearRecursive(Node*& node) {
     if (node == nullptr) {
         return;
     }
-    ClearRecursive(node->left);
-    ClearRecursive(node->right);
+    ClearRecursive(node->left);  //najpierw usuwa węzły z lewego poddrzewa, a następnie z prawego poddrzewa
+    ClearRecursive(node->right); 
     delete node;
     node = nullptr;
 }
-//wyświetlenie 
+//wyświetlenie rekurencyjnego drzewa
 void BinarySearchTree::InOrderDisplay(Node* node) const {
     if (node != nullptr) {
-        InOrderDisplay(node->left);
+        InOrderDisplay(node->left); //przeszukujemy lewe poddrzewo drzewa, zostaną wyświetlone wszystkie wartości w uporządkowany sposób
         std::cout << node->data << " ";
-        InOrderDisplay(node->right);
+        InOrderDisplay(node->right); //przeszukujemy prawe poddrzewo drzewa, zostaną wyświetlone wszystkie wartości w uporządkowany sposób
     }
 }
 
