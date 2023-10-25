@@ -1,19 +1,20 @@
 #include <iostream>
 #include <string>
+#include "BinarySearchTree.h"
 
 
 int main() {
-    //DrzewoBinarne tree;
+    BinarySearchTree tree;
     std::string input;
     bool running = true;
 
     while (running) {
-        std::cout << "Menu Binarnego Drzewa:\n";
+        std::cout << "\nMenu Binarnego Drzewa:\n";
         std::cout << "1. Dodaj element\n";
         std::cout << "2. Usun element\n";
         std::cout << "3. Usun cale drzewo\n";
         std::cout << "4. Szukaj elementu\n";
-        std::cout << "5. Wyswietl drzewo\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
         std::cout << "6. Narysuj drzewo\n";
         std::cout << "7. Zapisz drzewo do pliku\n";
         std::cout << "8. Wczytaj drzewo z pliku\n";
@@ -28,7 +29,7 @@ int main() {
             std::cout << "Wprowadz element do dodania: ";
             std::cin >> value;
             if(value[0] <= '9' && value[0] >='0'){
-                //dodawanie elementow
+                tree.Insert(std::stoi(value));
             } else {
                 std::cout<< "\n!!! To nie jest liczba !!!\n\n";
             }
@@ -37,14 +38,30 @@ int main() {
             std::cout << "Wprowadz element do usuniecia: ";
             std::cin >> value;
             if(value[0] <= '9' && value[0] >='0'){
-                //usuwanie elementow
+               tree.Remove(std::stoi(value));
             } else {
                 std::cout<< "\n!!! To nie jest liczba !!!\n\n";
             }
         } else if (input == "3") {
-           // czyszczenie drzewa
+            tree.Clear();
             std::cout << "Drzewo usuniete.\n";
-        } else if (input == "0"){
+        } else if (input == "4") {
+            std::cout << "Element do wyszukania: ";
+            std::cin >> value;
+
+             if(value[0] <= '9' && value[0] >='0'){
+                std::cout << (tree.Search(std::stoi(value)) ? "\nZnaleziono element \n" : "\nNie znaleziono elementu\n");
+            } else {
+                std::cout<< "\n!!! To nie jest liczba !!!\n\n";
+            }
+
+        } else if (input == "5") {
+            std::cout << "Tree: ";
+            tree.Display();
+            std::cout << "\n";
+        }
+        
+        else if (input == "0"){
             break;
         }else {
             std::cout << "\n!!! Wprowadzono niewlasciwe dane !!!\n\n";

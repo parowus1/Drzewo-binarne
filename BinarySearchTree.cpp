@@ -30,11 +30,19 @@ bool BinarySearchTree::Search(int value) const {
         } else {
             current = current->right;
         }
+    }
+    return false;
+}
+
+
 //wyświetlenie
 void BinarySearchTree::Display() const {
     InOrderDisplay(root);
     std::cout << std::endl;
-}
+}//zbyteczne
+
+
+
 //binarne zapisywanie
         void BinarySearchTree::InsertRecursive(Node*& node, int value) {
     if (node == nullptr) {
@@ -97,6 +105,3 @@ void BinarySearchTree::InOrderDisplay(Node* node) const {
 }
 
         
-    }
-    return false;
-}
