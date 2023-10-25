@@ -61,6 +61,9 @@ int main() {
 
         } else if (input == "0"){
             break;
+
+
+            
         }else {
             std::cout << "\n!!! Wprowadzono niewlasciwe dane !!!\n\n";
         }
