@@ -59,9 +59,10 @@ int main() {
             std::cout << "Tree: ";
             tree.Display();
             std::cout << "\n";
-        }
+        } else if (input == "6") {
+            tree.DisplayTree();
         
-        else if (input == "0"){
+        } else if (input == "0"){
             break;
         }else {
             std::cout << "\n!!! Wprowadzono niewlasciwe dane !!!\n\n";
