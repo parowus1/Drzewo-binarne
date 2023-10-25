@@ -30,6 +30,14 @@ bool BinarySearchTree::Search(int value) const {
         } else {
             current = current->right;
         }
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}
+
+
+        
     }
     return false;
 }
