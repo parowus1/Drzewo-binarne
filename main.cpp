@@ -45,7 +45,11 @@ int main() {
         } else if (input == "3") {
             tree.Clear();
             std::cout << "Drzewo usuniete.\n";
-        } else if (input == "4") {
+        } else if (input == "5") {
+            std::cout << "Tree: ";
+            tree.Display();
+            std::cout << "\n";
+        }else if (input == "4") {
             std::cout << "Element do wyszukania: ";
             std::cin >> value;
 
@@ -55,13 +59,7 @@ int main() {
                 std::cout<< "\n!!! To nie jest liczba !!!\n\n";
             }
 
-        } else if (input == "5") {
-            std::cout << "Tree: ";
-            tree.Display();
-            std::cout << "\n";
-        }
-        
-        else if (input == "0"){
+        } else if (input == "0"){
             break;
         }else {
             std::cout << "\n!!! Wprowadzono niewlasciwe dane !!!\n\n";
