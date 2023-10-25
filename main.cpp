@@ -1,22 +1,589 @@
-#include <iostream>
-#include <string>
-#include "BinarySearchTree.h"
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
 
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
 
-int main() {
-    BinarySearchTree tree;
-    std::string input;
-    bool running = true;
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
 
-    while (running) {
-        std::cout << "\nMenu Binarnego Drzewa:\n";
-        std::cout << "1. Dodaj element\n";
-        std::cout << "2. Usun element\n";
-        std::cout << "3. Usun cale drzewo\n";
-        std::cout << "4. Szukaj elementu\n";
-        std::cout << "5. Wyswietl inorder drzewa\n";
-        std::cout << "6. Narysuj drzewo\n";
-        std::cout << "7. Zapisz drzewo do pliku\n";
-        std::cout << "8. Wczytaj drzewo z pliku\n";
-\
-}
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif
+#ifndef BINARYSEARCHTREE_H
+#define BINARYSEARCHTREE_H
+
+class BinarySearchTree {
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const;
+};
+
+#endif

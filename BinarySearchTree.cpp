@@ -51,7 +51,7 @@ void BinarySearchTree::Display() const {
         InsertRecursive(node->left, value);
     } else {
         InsertRecursive(node->right, value);
-    }
+    }///
 }
 // binarne usuwanie
 bool BinarySearchTree::RemoveRecursive(Node*& node, int value) {
