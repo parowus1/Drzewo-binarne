@@ -161,7 +161,7 @@ void BinarySearchTree::CollectData()  {
      void BinarySearchTree::DisplayTree() {
         CollectData();
         if (paths_.empty()){ 
-            std::cout<< "404: Tree doesn't exist." << std::endl;
+            std::cout<< "Błąd: Drzewo nie instnieje." << std::endl;
             return;
         }
         std::cout << std::endl;
