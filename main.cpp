@@ -18,7 +18,7 @@ int main() {
         std::cout << "6. Narysuj drzewo\n";
         std::cout << "7. Zapisz drzewo do pliku\n";
         std::cout << "8. Wczytaj drzewo z pliku\n";
-        std::cout << "9. Wczytaj plik tekstowy z cyfer\n";
+        std::cout << "9. Wczytaj plik tekstowy z cyfr\n";
         std::cout << "0. Wyjscie\n";
         std::cout << "Wpisz swoj wybor: ";
         std::cin >> input;
