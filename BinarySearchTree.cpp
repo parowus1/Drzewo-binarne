@@ -77,6 +77,24 @@ bool BinarySearchTree::RemoveRecursive(Node*& node, int value) {
         return true;
     }
 }
+//binarne czyszczenie
+void BinarySearchTree::ClearRecursive(Node*& node) {
+    if (node == nullptr) {
+        return;
+    }
+    ClearRecursive(node->left);
+    ClearRecursive(node->right);
+    delete node;
+    node = nullptr;
+}
+//wyświetlenie 
+void BinarySearchTree::InOrderDisplay(Node* node) const {
+    if (node != nullptr) {
+        InOrderDisplay(node->left);
+        std::cout << node->data << " ";
+        InOrderDisplay(node->right);
+    }
+}
 
         
     }
