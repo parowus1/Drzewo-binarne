@@ -26,6 +26,6 @@ private:
     bool RemoveRecursive(Node*& node, int value);
     void ClearRecursive(Node*& node);
     void InOrderDisplay(Node* node) const;
-};//
+};
 
 #endif
