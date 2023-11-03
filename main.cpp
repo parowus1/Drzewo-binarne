@@ -5,7 +5,7 @@
 
 int main() {
     BinarySearchTree tree;
-    std::string input;
+    std::string input;////////
     bool running = true;
 
     while (running) {
@@ -61,13 +61,13 @@ int main() {
 
         } else if (input == "0"){
             break;
-  ////
+
 
             
         }else {
             std::cout << "\n!!! Wprowadzono niewlasciwe dane !!!\n\n";
         }
-        
+        ///////f
     }
 return 0;
 }
