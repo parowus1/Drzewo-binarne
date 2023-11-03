@@ -179,48 +179,9 @@ bool BinarySearchTree::RemoveRecursive(Node*& node, int value) {
             Node* temp = node;
             node = node->left;
             delete temp;
-        } else {//
-            Node* minRight = node->right;
-            while (minRight->left != nullptr) {
-                minRight = minRight->left;
-            }
-            node->data = minRight->data;
-            RemoveRecursive(node->right, minRight->data);
-        }
-        return true;
-    }
-}
-//binarne czyszczenie
-void BinarySearchTree::ClearRecursive(Node*& node) {
-    if (node == nullptr) {
-        return;
-    }
-    ClearRecursive(node->left);//
-    ClearRecursive(node->right);
-    delete node;
-    node = nullptr;
-}
-//wyświetlenie 
-void BinarySearchTree::InOrderDisplay(Node* node) const {
-    if (node != nullptr) {
-        InOrderDisplay(node->left);
-        std::cout << node->data << " ";
-        InOrderDisplay(node->right);//
-    }
-}
 
         
 
-
-#include "BinarySearchTree.h"
-#include <iostream>
-
-BinarySearchTree::BinarySearchTree() : root(nullptr) {}
-
-//czyszczenie
-BinarySearchTree::~BinarySearchTree() {
-    Clear();
-}
 //dodanie
 void BinarySearchTree::Insert(int value) {
     InsertRecursive(root, value);
@@ -233,8 +194,7 @@ bool BinarySearchTree::Remove(int value) {
 void BinarySearchTree::Clear() {
     ClearRecursive(root);
 }
-//przeszukiwanie drzewa
-bool BinarySearchTree::Search(int value) const {
+//przeszukiwanie
     Node* current = root;
     while (current != nullptr) {
         if (current->data == value) {
