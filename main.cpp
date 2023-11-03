@@ -69,7 +69,3619 @@ void BinarySearchTree::Display() const {
                tree.Remove(std::stoi(value));
             } else {
                 std::cout<< "\n!!! To nie jest liczba !!!\n\n";
-            }
+            }#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+#include "BinarySearchTree.h"
+#include <iostream>
+
+BinarySearchTree::BinarySearchTree() : root(nullptr) {}
+
+//czyszczenie
+BinarySearchTree::~BinarySearchTree() {
+    Clear();
+}
+//dodanie
+void BinarySearchTree::Insert(int value) {
+    InsertRecursive(root, value);
+}
+//usunięcie
+bool BinarySearchTree::Remove(int value) {
+    return RemoveRecursive(root, value);
+}
+
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+void BinarySearchTree::Clear() {
+    ClearRecursive(root);
+}
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
+        if (node->left == nullptr && node->right == nullptr) {
+            delete node;
+            node = nullptr;
+        } else if (node->left == nullptr
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {) {
         } else if (input == "3") {
             tree.Clear();
             std::cout << "Drzewo usuniete.\n";
