@@ -31,6 +31,687 @@ bool BinarySearchTree::Search(int value) const {
             current = current->right;
         }
     }
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
+    BinarySearchTree();
+    ~BinarySearchTree();
+    void Insert(int value);
+    bool Remove(int value);
+    void Clear();
+    bool Search(int value) const;
+    void Display() const;
+
+private:
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+
+        Node(int value) : data#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";#include <iostream>
+#include <string>
+#include "BinarySearchTree.h"
+
+
+int main() {
+    BinarySearchTree tree;
+    std::string input;
+    bool running = true;
+
+    while (running) {
+        std::cout << "\nMenu Binarnego Drzewa:\n";
+        std::cout << "1. Dodaj element\n";
+        std::cout << "2. Usun element\n";
+        std::cout << "3. Usun cale drzewo\n";
+        std::cout << "4. Szukaj elementu\n";
+        std::cout << "5. Wyswietl inorder drzewa\n";
+        std::cout << "6. Narysuj drzewo\n";
+        std::cout << "7. Zapisz drzewo do pliku\n";(value), left(nullptr), right(nullptr) {}
+    };
+
+    Node* root;
+
+    void InsertRecursive(Node*& node, int value);
+    bool RemoveRecursive(Node*& node, int value);
+    void ClearRecursive(Node*& node);
+    void InOrderDisplay(Node* node) const
     return false;
 }
 
