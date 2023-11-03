@@ -9,6 +9,34 @@ int main() {
     bool running = true;
 
     while (running) {
+//przeszukiwanie drzewa
+bool BinarySearchTree::Search(int value) const {
+    Node* current = root;
+    while (current != nullptr) {
+        if (current->data == value) {
+            return true;
+        } else if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return false;
+}
+
+
+//wyświetlenie
+void BinarySearchTree::Display() const {
+    InOrderDisplay(root);
+    std::cout << std::endl;
+}//zbyteczne
+        return false;
+    }
+    if (value < node->data) {
+        return RemoveRecursive(node->left, value);
+    } else if (value > node->data) {
+        return RemoveRecursive(node->right, value);
+    } else {
         std::cout << "\nMenu Binarnego Drzewa:\n";
         std::cout << "1. Dodaj element\n";
         std::cout << "2. Usun element\n";
