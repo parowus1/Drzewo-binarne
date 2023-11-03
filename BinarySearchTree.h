@@ -11,11 +11,13 @@ public:
     void Insert(int value);
     bool Remove(int value);
     void Clear();
-    bool Search(int value) const;    
+    std::string Search(int value) const;    
     void Display() const;
     void CollectData();
     void DisplayTree();
-
+    void Serialize(std::ofstream& file) const;
+    void Deserialize(std::ifstream& file);
+    void DisplayTreeToFile(const std::string& filename);
     std::vector<int> data_;       
 
 
@@ -28,9 +30,12 @@ private:
     };
 
     std::vector<std::string> paths_; 
-    int currentLevel_;  
-    Node* root;
+    int currentLevel_ = 0;  
+    void SerializeNode(std::ofstream& file, Node* node) const;
+    void DeserializeNode(std::ifstream& file, Node*& node);
 
+    Node* root;
+    void CollectDataInOrder(Node* node, std::string path);
     void InsertRecursive(Node*& node, int value);
     bool RemoveRecursive(Node*& node, int value);
     void ClearRecursive(Node*& node);

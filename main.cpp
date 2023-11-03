@@ -1,6 +1,26 @@
 #include <iostream>
 #include <string>
 #include "BinarySearchTree.h"
+#include "FileHandler.h"
+
+
+void wyczyscDrzewo(BinarySearchTree& tree) {
+    std::string choice = "";
+
+    while (choice != "0" && choice != "1") {
+        std::cout << "Czy chcesz wyczyscic drzewo? (1 - Tak, 0 - Nie): ";
+        std::cin >> choice;
+
+        if (choice == "1") {
+            tree.Clear();
+            std::cout << "\nDrzewo zostalo wyczyszczone.\n" << std::endl;
+        } else if (choice == "0") {
+            std::cout << "\nDrzewo nie zostalo wyczyszczone.\n" << std::endl;
+        } else {
+            std::cout << "\nBlad! Wprowadz 1, aby wyczyscic drzewo, lub 0, aby nie.\n" << std::endl;
+        }
+    }
+}
 
 
 int main() {
@@ -16,8 +36,9 @@ int main() {
         std::cout << "4. Szukaj elementu\n";
         std::cout << "5. Wyswietl inorder drzewa\n";
         std::cout << "6. Narysuj drzewo\n";
-        std::cout << "7. Zapisz drzewo do pliku\n";
-        std::cout << "8. Wczytaj drzewo z pliku\n";
+        std::cout << "7a. Zapisz drzewo do pliku\n";
+        std::cout << "7b. Rysuj drzewo do pliku\n";
+        std::cout << "8. Wczytaj drzewo z pliku .dat\n";
         std::cout << "9. Wczytaj plik tekstowy z cyfr\n";
         std::cout << "0. Wyjscie\n";
         std::cout << "Wpisz swoj wybor: ";
@@ -50,7 +71,7 @@ int main() {
             std::cout << "Element do wyszukania: ";
             std::cin >> value; //wprowadzanie liczby przez uzytkownika
              if(value[0] <= '9' && value[0] >='0'){  //program sprawdza, czy jest to liczba lub nie
-                std::cout << (tree.Search(std::stoi(value)) ? "\nZnaleziono element \n" : "\nNie znaleziono elementu\n"); //szuka elementu w drzewie 
+                std::cout << "\nSciezka do wartosci " + tree.Search(std::stoi(value)) << std::endl; //szuka elementu w drzewie 
             } else {
                 std::cout<< "\n!!! To nie jest liczba !!!\n\n";
             }
@@ -63,12 +84,36 @@ int main() {
         } else if (input == "6") {
             tree.DisplayTree();
         
-        } else if (input == "0"){
+       } else if (input == "7a") {
+            std::string filename;
+            std::cout << "Wpisz nazwe pliku .dat do zapisania: ";
+            std::cin >> filename;
+            FileHandler::SaveToFile(tree, filename);
+            std::cout << "Drzewo zapisane do pliku.\n";
+        } else if (input == "8") {
+            std::string filename;
+            std::cout << "Wpisz nazwe pliku do zaladowania: ";
+            std::cin >> filename;
+            if (FileHandler::LoadFromFile(tree, filename)) {
+                std::cout << "Drzewo zostalo zaladowane z pliku.\n";
+            }
+        } else if (input == "9") {
+            wyczyscDrzewo(tree);
+            std::string filename;
+            std::cout << "Wpisz nazwe pliku .txt aby zaladowac drzewo: ";
+            std::cin >> filename;
+            if (FileHandler::LoadFromTextFile(tree, filename)) {
+                std::cout << "Drzewo zostalo zaladowane z pliku tekstowego.\n";
+            }
+            
+        } else if (input == "7b"){
+             std::string filename = "";
+            std::cout << "Wpisz nazwe pliku .txt w ktorym nalezy narysowac drzewo: ";
+            std::cin >> filename;
+             tree.DisplayTreeToFile(filename + ".txt");
+        } else if (input == "0") {
             break;
-        }else {
-            std::cout << "\n!!! Wprowadzono niewlasciwe dane !!!\n\n";
         }
-        ///////f
     }
 return 0;
 }

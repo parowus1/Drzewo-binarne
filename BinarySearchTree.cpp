@@ -5,18 +5,18 @@
 #include <vector>
 #include <iomanip>
 #include <cmath>
+#include <fstream>
 
 BinarySearchTree::BinarySearchTree() : root(nullptr) {}
 
-//czyszczenie
 BinarySearchTree::~BinarySearchTree() {
     Clear();
 }
-//dodanie
+
 void BinarySearchTree::Insert(int value) {
     InsertRecursive(root, value);
 }
-//usunięcie
+
 bool BinarySearchTree::Remove(int value) {
     return RemoveRecursive(root, value);
 }
@@ -24,44 +24,49 @@ bool BinarySearchTree::Remove(int value) {
 void BinarySearchTree::Clear() {
     ClearRecursive(root);
 }
-//przeszukiwanie drzewa
-bool BinarySearchTree::Search(int value) const {
+
+std::string BinarySearchTree::Search(int value) const {
     Node* current = root;
+    std::string path = "";
     while (current != nullptr) {
         if (current->data == value) {
-            return true;
+            return path;
         } else if (value < current->data) {
             current = current->left;
+            path += "0"; 
         } else {
             current = current->right;
+            path += "1"; 
         }
     }
-    return false;
+    return "Nie znaleziono elementu"; 
 }
 
-
-//wyświetlenie drzewa
 void BinarySearchTree::Display() const {
     InOrderDisplay(root);
-    std::cout << std::endl;
-}//zbyteczne
+}
 
-
-
-//rekurencyjne wstawianie nowego elementu do drzewa
-        void BinarySearchTree::InsertRecursive(Node*& node, int value) {
-    if (node == nullptr) { //sprawdza czy drzewo jest puste lub czy jesteśmy na końcu drzewa
-        node = new Node(value);
-    } else if (value < node->data) { //jeśli wartość którą dodajemy jest mniejsza od tej znajdującej się w drzewie, to zostaje dodana do lewego poddrzewa i na odwrót
-        InsertRecursive(node->left, value); 
-    } else {
-        InsertRecursive(node->right, value); 
+void BinarySearchTree::InOrderDisplay(Node* node) const {
+    if (node != nullptr) {
+        InOrderDisplay(node->left);
+        std::cout << node->data << " ";
+        InOrderDisplay(node->right);
     }
 }
-// rekurencyjne usuwanie elementu z drzewa
+
+void BinarySearchTree::InsertRecursive(Node*& node, int value) {
+    if (node == nullptr) {
+        node = new Node(value);
+    } else if (value < node->data) {
+        InsertRecursive(node->left, value);
+    } else {
+        InsertRecursive(node->right, value);
+    }
+}
+
 bool BinarySearchTree::RemoveRecursive(Node*& node, int value) {
     if (node == nullptr) {
-        return false; //jeśli drzewo jest puste to kończy działanie
+        return false;
     }
     if (value < node->data) {
         return RemoveRecursive(node->left, value);
@@ -90,23 +95,15 @@ bool BinarySearchTree::RemoveRecursive(Node*& node, int value) {
         return true;
     }
 }
-//rekurencyjne usuwanie wszystkich węzłów w drzewie
+
 void BinarySearchTree::ClearRecursive(Node*& node) {
     if (node == nullptr) {
         return;
     }
-    ClearRecursive(node->left);  //najpierw usuwa węzły z lewego poddrzewa, a następnie z prawego poddrzewa
-    ClearRecursive(node->right); 
+    ClearRecursive(node->left);
+    ClearRecursive(node->right);
     delete node;
     node = nullptr;
-}
-//wyświetlenie rekurencyjnego drzewa
-void BinarySearchTree::InOrderDisplay(Node* node) const {
-    if (node != nullptr) {
-        InOrderDisplay(node->left); //przeszukujemy lewe poddrzewo drzewa, zostaną wyświetlone wszystkie wartości w uporządkowany sposób
-        std::cout << node->data << " ";
-        InOrderDisplay(node->right); //przeszukujemy prawe poddrzewo drzewa, zostaną wyświetlone wszystkie wartości w uporządkowany sposób
-    }
 }
 
 void BinarySearchTree::CollectData()  {
@@ -161,7 +158,7 @@ void BinarySearchTree::CollectData()  {
      void BinarySearchTree::DisplayTree() {
         CollectData();
         if (paths_.empty()){ 
-            std::cout<< "Błąd: Drzewo nie instnieje." << std::endl;
+            std::cout<< "404: Drzewo nie istnieje." << std::endl;
             return;
         }
         std::cout << std::endl;
@@ -186,4 +183,78 @@ void BinarySearchTree::CollectData()  {
             n *= 2;
         }
     }
-        
+
+
+    void BinarySearchTree::DisplayTreeToFile(const std::string& filename) {
+    CollectData();
+    if (paths_.empty()){ 
+        std::cout << "404: Drzewo nie istnieje." << std::endl;
+        return;
+    }
+
+    // Otwórz plik do zapisu
+    std::ofstream outputFile(filename);
+    if (!outputFile.is_open()) {
+        std::cerr << "Blad: Nie mozna otworzyc pliku do zapisu." << std::endl;
+        return;
+    }
+
+    int n = 1, wysokosc = currentLevel_, licznik = 0;
+    const int total_width = wysokosc * pow(2, wysokosc);
+    for (int i = 0; i < wysokosc; i++) {
+        int field_width = total_width / (2 * n);
+        for (int j = 0; j < n; j++) {
+            ++licznik;
+
+            if (std::stoi(("1" + paths_.front()), 0, 2) == licznik) {
+                outputFile << std::setw(field_width) << std::to_string(data_[0]);
+                paths_.erase(paths_.begin());
+                data_.erase(data_.begin());
+            } else {
+                outputFile << std::setw(field_width) << "-";
+            }
+
+            outputFile << std::setw(field_width) << ' ';
+        }
+        outputFile << std::endl;
+        n *= 2;
+    }
+
+    // Zamknij plik po zapisie
+    outputFile.close();
+}
+
+void BinarySearchTree::Serialize(std::ofstream& file) const {
+    SerializeNode(file, root);
+}
+
+void BinarySearchTree::SerializeNode(std::ofstream& file, Node* node) const {
+    if (node == nullptr) {
+        int marker = -1;
+        file.write(reinterpret_cast<char*>(&marker), sizeof(int));
+    } else {
+        file.write(reinterpret_cast<char*>(&node->data), sizeof(int));
+        SerializeNode(file, node->left);
+        SerializeNode(file, node->right);
+    }
+}
+
+void BinarySearchTree::Deserialize(std::ifstream& file) {
+   // Clear();
+    DeserializeNode(file, root);
+}
+
+void BinarySearchTree::DeserializeNode(std::ifstream& file, Node*& node) {
+    int val;//
+    if (file.read(reinterpret_cast<char*>(&val), sizeof(int))) {
+        if (val == -1) {
+            node = nullptr;
+        } else {
+            node = new Node(val);
+            DeserializeNode(file, node->left);
+            DeserializeNode(file, node->right);
+        }
+    }
+}
+
+
